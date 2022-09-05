@@ -10,8 +10,21 @@ $authenticate = new AuthenticateSSO($key);
 // encrypt
 $login = 'john@example.com';
 $loginEncrypted = $authenticate->encrypt($login);
-echo sprintf("Encrypt:\n%s => %s\n\n",$login, $loginEncrypted);
+?>
 
-// decode
+<h2>Encrypt:  <?php echo $login;?></h2>
+
+
+<pre>
+<?php echo $loginEncrypted; ?>
+</pre>
+
+<hr>
+
+<h2>Decrypt:</h2>
+
+<?php
+// decrypt:
 $login = $authenticate->decrypt($loginEncrypted);
-echo sprintf("Decrypt:\n%s => %s\n\n",$loginEncrypted, $login);
+echo $loginEncrypted;
+?>
