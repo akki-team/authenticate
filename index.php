@@ -24,7 +24,5 @@ $loginEncrypted = $authenticate->encrypt($login);
 <h2>Decrypt:</h2>
 
 <?php
-// decrypt:
-$login = $authenticate->decrypt($loginEncrypted);
-echo $loginEncrypted;
+echo $authenticate->decrypt($loginEncrypted);
 ?>
